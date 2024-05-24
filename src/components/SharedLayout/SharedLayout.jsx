@@ -16,7 +16,7 @@ import logoImage from './call.png';
 import { logOut } from '../../redux/AuthRedux/operations';
 import { useDispatch } from 'react-redux';
 import { useAuthHook } from '../../customHook/customHook';
-import css from './SharedLayout.module.css'
+//import css from './SharedLayout.module.css'
 /*import {
   selectUser,
   selectIsLoggedIn,
@@ -54,9 +54,11 @@ export const SharedLayout = () => {
           </Button>
         </nav>
       </Header>
-      <Suspense fallback={<div className={css.supense}>Loading page...</div>}>
-        <Outlet />
-      </Suspense>
+      
+        <Suspense fallback={<div>Loading page...</div>}>
+          <Outlet />
+        </Suspense>
+      
     </Container>
   );
 };
