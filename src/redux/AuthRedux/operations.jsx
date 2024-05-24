@@ -26,8 +26,8 @@ export const register = createAsyncThunk(
       setAuthHeader(res.data.token);
       return res.data;
     } catch (error) {
-       alert(
-         'Incorrect email or password format, email must have at least one number and password must be at least 8 characters long and contain at least one uppercase letter, one digit, and one special character from the specified set [@$!%*?&]'
+      alert(
+        'Incorrect email or password format, email must have at least one number and password must be at least 8 characters long and contain at least one uppercase letter, one digit, and one special character from the specified set [@$!%*?&]*ENSURE EMAIL HAS NOT BEEN REGISTERED BEFORE*'
        );
       return thunkAPI.rejectWithValue(error.message);
     }
