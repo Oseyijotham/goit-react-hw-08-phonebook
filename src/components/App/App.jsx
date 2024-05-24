@@ -28,7 +28,7 @@ export const App = () => {
     <b>Refreshing user...</b>
   ) : (
     <Routes>
-      <Route path="/" element={<SharedFooter />}>
+      <Route path="/" element={<SharedFooter/>}>
         <Route
           index
           element={
